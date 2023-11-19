@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="../style/styles.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <title>Service Training</title>
+    </head>
+
+    <style>
+        .btnHover:hover{
+            background-color: #7b4897;
+        }
+
+        .anchortags{
+            background-color: #ef4729;
+            border-radius: 10px;
+            padding: 9px;
+            font-size: 18px;
+            color: white;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    </style>
+
+    <body oncontextmenu="return false" style="background-color: #f7f7f7;">
+
+        <br /><br />
+
+        <div align="center">
+            <img src="../images/d2h/WhatsApp Image 2023-10-28 at 2.29.15 PM.jpeg"  height="65" style="border-radius: 12px;">
+        </div><br /><br />
+
+        <div align="center">
+            <p style="font-size: 21px; padding: 10px; color: white; background-color: #ef4729;"><b>Pack / Recharge</b></p>
+        </div><br />
+         
+        
+        <!-- <div style="width: 100%; display: flex; justify-content: center;">
+        
+            <div style="width: 70%; background-color: #ef4729; display: flex; justify-content: center; border: 1px solid white;">
+                <h2 style="color: white; font-size: 24px;">DISH TV</h2>
+            </div>
+        </div> -->
+
+        <div style="width: 100%; display: flex; justify-content: center;">
+            <div style="background-color: #ef4729; width: 70%; display: flex; justify-content: center;">
+                <button style="font-size: 18px; width: 10%; padding: 1%; margin: 0; border-right: 1px solid white;" class="btnHover" onclick="openCity('London')">DISH TV</button>
+                <button style="font-size: 18px; width: 10%; padding: 1%; margin: 0;" class="btnHover" onclick="openCity('Paris')">D2H</button>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+
+            <div id="London" class="city">
+                <div style="display: flex; flex-direction: column; margin-top: 9%; text-align: center;">
+                    <a class="anchortags" href="https://www.dishtv.in/pages/home.aspx" target="_blank">Click here to know Plans for Dish TV</a>
+                    <br/>
+                    <a class="anchortags" href="https://www.dishtv.in/pages/Instant-Recharge-Payment.aspx" target="_blank">Click here to Recharge</a>
+                </div>
+            </div>
+
+
+            <div id="Paris" class="city" style="display:none">
+                <div style="display: flex; flex-direction: column; margin-top: 9%; text-align: center;">
+                    <a class="anchortags" href="https://www.d2h.com/" target="_blank">Click here to know Plans for D2H</a>
+                    <br/>
+                    <a class="anchortags" href="https://www.d2h.com/quick-recharge" target="_blank">Click here to Recharge</a>
+                </div>
+            </div>
+        </div>
+          
+    </body>
+
+    <script>
+        function openCity(cityName) {
+          var i;
+          var x = document.getElementsByClassName("city");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          document.getElementById(cityName).style.display = "block";  
+        }
+    </script>
+
+</html>
