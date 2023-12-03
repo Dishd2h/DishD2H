@@ -162,39 +162,124 @@ em {
     font-style: italic;
 }
 
+
+.title{
+    width: 70%;
+    background-color: #7b4897;
+}
+
+.imgTitles{
+    width: 70%;
+}
+
+.videos{
+    width: 280px;
+    height:157px;
+}
+
+.navTitle{
+    width: 50%;
+    background-color: #7b4897; 
+}
+
+.navControls{
+    width: 10%;
+    background-color: #7b4897;
+}
+
+.packMultibuttonsContainer{
+    width: 70%;
+    background-color: #ef4729;
+}
+
+.multiButtons{
+    width: 10%;
+    padding: 1%;
+    margin: 0;
+    font-size: 18px;
+}
+
+.multiVideosAlign{
+    flex-direction: row;
+}
+
+
 /* media query */
-@media (min-width: 992px){
+@media only screen and (max-width: 768px){
 
-    .col-lg-4 {
-        -ms-flex: 0 0 33.333333%;
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
+    .title{
+        width: 100%;
+    }
+
+    .imgTitles{
+        width: 100%;
+    }
+
+    .videos{
+        width: 335px;
+        height: 177px;
+    }
+
+    .videosHeading{
+        justify-content: start !important;
+        margin-left: 5%;
+    }
+
+    .watchoAnchor{
+        width: 70% !important; 
+    }
+
+    .navTitle{
+        width: 100%;
+    }
+
+    .navControls{
+        width: 20%;
+    }
+
+    .packMultibuttonsContainer{
+        width: 100%;
+    }
+
+    .multiButtons{
+        width: 30%;
+        padding: 2%;
+    }
+
+    .multiVideosAlign{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .multiVideosAlign iframe:nth-child(1){
+        margin-right: 0% !important;
+        width: 340px;
+        height: 200px;
+    }
+
+    .multiVideosAlign iframe:nth-child(2){
+        margin-left: 0% !important;
+        margin-top: 5%;
+        width: 340px;
+        height: 200px;
+    }
+
+    .sectionHeadings{
+        font-size: 18px;
+        padding: 1%;
+    }
+
+    .sectionsGap{
+        margin-top: 12% !important;
     }
 }
 
-@media (min-width: 992px){
 
-    .col-lg-4 {
-        -ms-flex: 0 0 33.333333%;
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
+.imageScale {
+    transition: transform 0.25s ease;
 }
 
-@media (min-width: 768px){
-
-    .col-md-12 {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
-
-@media (min-width: 576px){
-
-    .col-sm-12 {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+.imageScale:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
 }
