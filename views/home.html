@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="../style/styles.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css">
+        <title>Service Training</title>
+    </head>
+
+    <script>
+        window.onload = (event) => {
+           if(Boolean(localStorage.getItem("authorized"))){}  
+           else{
+            var location =  window.location.href;
+            window.location.href = location.replace("views/home.html", "index.html");
+           }          
+        };
+    </script>
+
+    <body oncontextmenu="return false" style="background-color: #ffffff;">
+        <br /><br />
+        <div align="center">
+            <img src="../images/d2h/WhatsApp Image 2023-10-28 at 2.29.15 PM.jpeg"  height="65" style="border-radius: 12px;">
+
+            <!-- <i class="fa fa-sign-out" style="font-size: 40px;"></i> -->
+        </div><br /><br />
+
+        <div align="center">
+            <p style="font-size: 18px; color: #7b4897;"><b>Select Service Training Catalog</b></p>
+        </div><br />
+
+
+        <div style="text-align: center;">
+            <a href="./dishD2hCatalog.html" class="eng-btn-signup button">Dish / D2H Service</a><br /><br />
+           
+            <a href="./watcho.html" class="eng-btn-signup button">Watcho</a><br /><br />
+            <a href="./packRecharge.html" class="eng-btn-signup button">Pack / Recharge</a><br /><br />
+
+            <br /><br /><br />
+        </div>
+
+        <!--<img style="position: fixed; bottom: 10px; left: 10px; opacity: 0.5;" src="../images/eng_logo.png" alt="" width="120" height="100"> -->
+
+    </body>
+
+</html>

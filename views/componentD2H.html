@@ -5,9 +5,19 @@
         <link rel="stylesheet" href="../style/styles.css">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Service Training</title>
     </head>
+
+    <script>
+        window.onload = (event) => {
+           if(Boolean(localStorage.getItem("authorized"))){}  
+           else{
+                var location =  window.location.href;
+                window.location.href = location.replace("views/componentD2H.html", "index.html");
+            }          
+        };
+    </script>
 
     <body oncontextmenu="return false" style="background-color: #ffffff;">
 
@@ -19,7 +29,7 @@
 
         <div style="width: 100%; display: flex; justify-content: center; border-top: 1px solid white; height: 60px; margin-bottom: 3%;">
             <div class="navControls" style="display: flex; justify-content: start;" >
-                <a href="../index.html"> <img class="imageScale" src="../images/homeIcon.png" height="40" style="margin: 10px;"> </a>
+                <a href="./home.html"> <img src="../images/homeIcon.png" height="40" style="margin: 10px;"> </a>
             </div>
             
             <div class="navTitle" style="display: flex; justify-content: center;">
@@ -27,7 +37,7 @@
             </div>
             
             <div class="navControls" style=" display: flex; justify-content: end;">
-                <a href="../views/dishD2hCatalog.html"> <img class="imageScale" src="../images/backIcon.png" height="40" style="margin: 10px;"> </a>
+                <a href="../views/dishD2hCatalog.html"> <img src="../images/backIcon.png" height="40" style="margin: 10px;"> </a>
             </div>
         </div>
         <br />

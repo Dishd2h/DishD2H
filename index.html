@@ -5,7 +5,8 @@
         <link rel="stylesheet" href="./style/styles.css">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src='./views/config.js'></script>
         <title>Service Training</title>
     </head>
 
@@ -14,24 +15,52 @@
 
         <div align="center">
             <img src="./images/d2h/WhatsApp Image 2023-10-28 at 2.29.15 PM.jpeg"  height="65" style="border-radius: 12px;">
-        </div><br /><br />
+        </div>
+        <br /><br />
 
-        <div align="center">
-            <p style="font-size: 18px; color: #7b4897;"><b>Select Service Training Catalog</b></p>
-        </div><br />
+        <div class="container">
+            <form onsubmit="loginAsync()"  id="myForm">
+                
+                <div class="col" id="formData">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required style="margin-top: 3%;">
 
+                    
+                    <input type="submit"  value="Login" style="margin-top: 10%;" class="submitBtn">
+                </div>
 
-        <div style="text-align: center;">
-            <a href="./views/dishD2hCatalog.html" class="eng-btn-signup button">Dish / D2H Service</a><br /><br />
-           
-            <a href="./views/watcho.html" class="eng-btn-signup button">Watcho</a><br /><br />
-            <a href="./views/packRecharge.html" class="eng-btn-signup button">Pack / Recharge</a><br /><br />
+                <div style="margin-top: 10%; text-align: center;" id="error">
+                    <p>Invalid username or password</p>
+                </div>
+            </form>
+        </div>
 
-            <br /><br /><br />
-            
-<!--             <img style="position: fixed; bottom: 10px; left: 10px; opacity: 0.5;" src="../images/eng_logo.png" alt="" width="120" height="100"> -->
+        <script>
+            var form=document.getElementById("myForm");
+            form.addEventListener('submit', loginAsync);
 
+            function loginAsync(event){
+                event.preventDefault();
+                var data = document.getElementById("formData");
+                var userName = data.children[0].value;
+                var password = data.children[1].value;
 
+                if(userName == window.username && password == window.password){
+                    var doc = document.getElementById("error");
+                    doc.style.display = 'none';
+                    
+                    var location =  window.location.href;
+                    window.location.href = location.replace("index.html", "views/home.html");
+                    localStorage.setItem("authorized", true);
+                    localStorage.setItem("authorized", true);
+                }else{
+                    
+                    var doc = document.getElementById("error");
+                    doc.style.display = 'block';
+                }
+            }
+
+        </script>
     </body>
 
 </html>

@@ -5,11 +5,25 @@
         <link rel="stylesheet" href="../style/styles.css">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Service Training</title>
     </head>
 
+    <script>
+        window.onload = (event) => {
+           if(Boolean(localStorage.getItem("authorized"))){}  
+           else{
+            var location =  window.location.href;
+            window.location.href = location.replace("views/packRecharge.html", "index.html");
+           }          
+        };
+    </script>
+
     <style>
+        .defaultBtn{
+            background-color: #7b4897;
+        }
+
         .btnHover:hover{
             background-color: #7b4897;
         }
@@ -34,7 +48,7 @@
 
         <div style="width: 100%; display: flex; justify-content: center; border-top: 1px solid white; height: 60px; margin-bottom: 3%;">
             <div class="navControls" style="display: flex; justify-content: start;" >
-                <a href="../index.html"> <img class="imageScale" src="../images/homeIcon.png" height="40" style="margin: 10px;"> </a>
+                <a href="./home.html"> <img src="../images/homeIcon.png" height="40" style="margin: 10px;"> </a>
             </div>
             
             <div class="navTitle" style="display: flex; justify-content: center;">
@@ -42,21 +56,21 @@
             </div>
             
             <div class="navControls" style="display: flex; justify-content: end;">
-                <a href="../index.html"> <img class="imageScale" src="../images/backIcon.png" height="40" style="margin: 10px;"> </a>
+                <a href="./home.html"> <img src="../images/backIcon.png" height="40" style="margin: 10px;"> </a>
             </div>
         </div>
         <br />
 
         <div style="width: 100%; display: flex; justify-content: center;">
             <div class="packMultibuttonsContainer" style="display: flex; justify-content: center;">
-                <button class="multiButtons btnHover" style="border-right: 1px solid white;" onclick="openCity('London')">DISH TV</button>
-                <button class="multiButtons btnHover" onclick="openCity('Paris')">D2H</button>
+                <button class="multiButtons btnHover" style="border-right: 1px solid white;" onclick="openCity('DishTv')">DISH TV</button>
+                <button class="multiButtons btnHover" onclick="openCity('D2h')">D2H</button>
             </div>
         </div>
 
         <div style="display: flex; justify-content: center;">
 
-            <div id="London" class="city">
+            <div id="DishTv" class="section">
                 <div style="display: flex; flex-direction: column; margin-top: 9%; text-align: center;">
                     <a class="anchortags" href="https://www.dishtv.in/pages/home.aspx" target="_blank">Click here to know Plans for Dish TV</a>
                     <br/>
@@ -65,7 +79,7 @@
             </div>
 
 
-            <div id="Paris" class="city" style="display:none">
+            <div id="D2h" class="section" style="display:none">
                 <div style="display: flex; flex-direction: column; margin-top: 9%; text-align: center;">
                     <a class="anchortags" href="https://www.d2h.com/" target="_blank">Click here to know Plans for D2H</a>
                     <br/>
@@ -77,13 +91,13 @@
     </body>
 
     <script>
-        function openCity(cityName) {
+        function openCity(sectionName) {
           var i;
-          var x = document.getElementsByClassName("city");
+          var x = document.getElementsByClassName("section");
           for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";  
           }
-          document.getElementById(cityName).style.display = "block";  
+          document.getElementById(sectionName).style.display = "block";
         }
     </script>
 
