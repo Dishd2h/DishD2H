@@ -9,6 +9,16 @@
         <title>Service Training</title>
     </head>
 
+    <script>
+        window.onload = (event) => {
+           if(Boolean(localStorage.getItem("authorized"))){}  
+           else{
+                var location =  window.location.href;
+                window.location.href = location.replace("views/dishD2hCatalog.html", "index.html");
+            }          
+        };
+    </script>
+
     <body oncontextmenu="return false" style="background-color: #ffffff;">
 
         <div style="width: 100%; display: flex; justify-content: center;">
